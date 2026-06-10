@@ -1,0 +1,74 @@
+<!-- DASHBOARD > MEUS PETS -->
+<div class="page-header">
+  <div class="page-title">Meus cadastros</div>
+  <button class="btn-primary" onclick="showDashPage('cadastro-pet')" style="font-size:13px; padding:10px 20px; border-radius:var(--radius); border:none; cursor:pointer;">+ Cadastrar novo animal</button>
+</div>
+<div style="font-size:13px; color:var(--cinza-texto); margin-bottom:20px;">2 animais cadastrados</div>
+<div class="pets-grid">
+
+  <!-- Card: Rex -->
+  <div class="pet-card">
+    <div class="pet-card-header dog-header">
+      <div style="width:36px;height:36px;background:rgba(255,255,255,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">🐕</div>
+      <div>
+        <div class="pet-card-name">Rex</div>
+        <div class="pet-card-desc">Cão · Macho · 3 anos · Vira-lata</div>
+      </div>
+    </div>
+    <div class="pet-card-body">
+      <div class="pet-detail-row">
+        <span class="pet-detail-label">Microchip</span>
+        <span style="font-size:12px; font-weight:500;">985112300445678</span>
+      </div>
+      <div class="pet-detail-row">
+        <span class="pet-detail-label">Castração</span>
+        <span class="status-pill status-blue">Realizada 10/05</span>
+      </div>
+      <div class="pet-detail-row">
+        <span class="pet-detail-label">Pós-cirúrgico</span>
+        <span class="status-pill status-amber">Em andamento</span>
+      </div>
+      <div class="pet-detail-row">
+        <span class="pet-detail-label">Última consulta</span>
+        <span style="font-size:12px;">10/05/2025</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card: Mia -->
+  <div class="pet-card">
+    <div class="pet-card-header cat-header">
+      <div style="width:36px;height:36px;background:rgba(255,255,255,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">🐈</div>
+      <div>
+        <div class="pet-card-name">Mia</div>
+        <div class="pet-card-desc">Gato · Fêmea · 1 ano · SRD</div>
+      </div>
+    </div>
+    <div class="pet-card-body">
+      <div class="pet-detail-row">
+        <span class="pet-detail-label">Microchip</span>
+        <span class="status-pill status-gray">Não registrado</span>
+      </div>
+      <div class="pet-detail-row">
+        <span class="pet-detail-label">Castração</span>
+        <span class="status-pill status-amber">Agendada 15/06</span>
+      </div>
+      <div class="pet-detail-row">
+        <span class="pet-detail-label">Vacinação</span>
+        <span class="status-pill status-green">Em dia</span>
+      </div>
+      <div class="pet-detail-row" style="margin-top:8px;">
+        <button onclick="showDashPage('agenda')" style="background:var(--azul-primario);color:white;border:none;padding:9px 18px;border-radius:var(--radius);font-size:13px;cursor:pointer;font-family:inherit;">Ver agendamento</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Atalho: Cadastrar novo -->
+<div style="margin-top:20px;">
+  <div class="pet-card" onclick="showDashPage('cadastro-pet')" style="display:flex;align-items:center;gap:12px;padding:20px;border-style:dashed;cursor:pointer;border-radius:var(--radius-lg);">
+    <div style="width:36px;height:36px;background:var(--cinza-fundo);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;">➕</div>
+    <div style="font-size:13px;color:var(--cinza-texto);">Cadastrar novo animal</div>
+  </div>
+</div>

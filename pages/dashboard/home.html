@@ -1,0 +1,114 @@
+<!-- DASHBOARD > HOME -->
+<div class="page-header">
+  <div>
+    <div style="font-size:12px; color:var(--cinza-texto); margin-bottom:2px;">Olá,</div>
+    <div class="page-title">João Silva 👋</div>
+  </div>
+  <button class="btn-primary" onclick="showDashPage('cadastro-pet')" style="font-size:13px; padding:10px 20px; border-radius:var(--radius); border:none; cursor:pointer;">+ Cadastrar animal</button>
+</div>
+
+<div class="summary-row">
+  <div class="summary-card">
+    <div class="summary-num">2</div>
+    <div class="summary-label">Animais cadastrados</div>
+  </div>
+  <div class="summary-card">
+    <div class="summary-num">1</div>
+    <div class="summary-label">Castração agendada</div>
+  </div>
+  <div class="summary-card pending">
+    <div class="summary-num">1</div>
+    <div class="summary-label">Pendência</div>
+  </div>
+</div>
+
+<div class="section-header" style="margin-bottom:12px;">
+  <h3 style="font-size:14px; font-weight:600;">Serviços</h3>
+</div>
+<div class="dash-services">
+  <div class="dash-service-card" onclick="showDashPage('cadastro-pet')">
+    <div class="dash-service-icon teal"><i data-lucide="plus-circle"></i></div>
+    <h4>Cadastrar animal</h4>
+    <p>Novo pet</p>
+  </div>
+  <div class="dash-service-card" onclick="showDashPage('resgate')">
+    <div class="dash-service-icon amber"><i data-lucide="ambulance"></i></div>
+    <h4>Solicitar resgate</h4>
+    <p>Urgência</p>
+  </div>
+  <div class="dash-service-card" onclick="showDashPage('castracao')">
+    <div class="dash-service-icon blue"><i data-lucide="scissors"></i></div>
+    <h4>Castração</h4>
+    <p>Agendar vaga</p>
+  </div>
+  <div class="dash-service-card">
+    <div class="dash-service-icon green"><i data-lucide="activity"></i></div>
+    <h4>Pós cirúrgico</h4>
+    <p>Acompanhar</p>
+  </div>
+  <div class="dash-service-card" onclick="showDashPage('denuncia')">
+    <div class="dash-service-icon" style="background:#FCEBEB; color:#A32D2D;"><i data-lucide="alert-octagon"></i></div>
+    <h4>Denunciar</h4>
+    <p>Maus-tratos</p>
+  </div>
+  <div class="dash-service-card" onclick="showDashPage('edu')">
+    <div class="dash-service-icon purple"><i data-lucide="book-open"></i></div>
+    <h4>Educação</h4>
+    <p>Conteúdos</p>
+  </div>
+  <div class="dash-service-card" onclick="showDashPage('adocao')">
+    <div class="dash-service-icon" style="background:#EBF5FC; color:#185FA5;"><i data-lucide="heart"></i></div>
+    <h4>Adoção</h4>
+    <p>Encontre um pet</p>
+  </div>
+</div>
+
+<div class="animals-section">
+  <div class="section-header">
+    <h3>Meus animais</h3>
+    <span class="add-link" onclick="showDashPage('cadastro-pet')" style="cursor:pointer;">+ Cadastrar novo</span>
+  </div>
+  <div class="animal-row">
+    <div class="animal-avatar dog"><i data-lucide="dog" style="color:#185FA5;"></i></div>
+    <div class="animal-info">
+      <div class="animal-name">Rex</div>
+      <div class="animal-desc">Cão · Vira-lata · 3 anos · Macho</div>
+      <div class="animal-tags">
+        <span class="badge badge-blue">Microchipado</span>
+        <span class="badge badge-green">Castrado</span>
+      </div>
+    </div>
+    <div class="animal-actions">
+      <button class="action-btn action-btn-blue">Ver cadastro</button>
+      <button class="action-btn action-btn-gray">Editar</button>
+    </div>
+  </div>
+  <div class="animal-row">
+    <div class="animal-avatar cat"><i data-lucide="cat" style="color:#993556;"></i></div>
+    <div class="animal-info">
+      <div class="animal-name">Mia</div>
+      <div class="animal-desc">Gato · SRD · 1 ano · Fêmea</div>
+      <div class="animal-tags">
+        <span class="badge badge-amber">⚠ Castração pendente</span>
+      </div>
+    </div>
+    <div class="animal-actions">
+      <button class="action-btn action-btn-blue" onclick="showDashPage('castracao')">Agendar castração</button>
+      <button class="action-btn action-btn-gray">Ver cadastro</button>
+    </div>
+  </div>
+</div>
+
+<div class="notif-section">
+  <div class="section-header">
+    <h3>Notificações recentes</h3>
+    <span class="add-link">Ver todas</span>
+  </div>
+  <div class="notif-item">
+    <div class="notif-icon"><i data-lucide="check"></i></div>
+    <div class="notif-text">
+      <div class="notif-title">Castração da Mia confirmada</div>
+      <div class="notif-sub">Agendada para 15/06 às 08h · Clínica Laranjeiras</div>
+    </div>
+  </div>
+</div>

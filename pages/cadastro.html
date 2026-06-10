@@ -1,0 +1,49 @@
+<!-- ===== CADASTRO DE CONTA ===== -->
+<div class="auth-layout">
+  <div class="auth-card" style="width: 480px;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 6px;">
+      <span style="font-size:13px; font-weight:600; color:#1a1a1a;">Cadastro</span>
+      <span style="font-size:12px; color:var(--cinza-texto);">Passo 1 de 3</span>
+    </div>
+    <div class="step-progress" style="margin-bottom:24px;">
+      <div class="step-bar active"></div>
+      <div class="step-bar pending"></div>
+      <div class="step-bar pending"></div>
+    </div>
+    <h2 style="text-align:left; font-size:18px;">Criar conta</h2>
+    <p class="auth-subtitle" style="text-align:left;">Dados pessoais do responsável</p>
+    <div class="form-group">
+      <label class="form-label">Nome completo</label>
+      <input class="form-input" type="text" placeholder="Como consta no documento">
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+      <div class="form-group">
+        <label class="form-label">CPF</label>
+        <input class="form-input" type="text" placeholder="000.000.000-00">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Telefone / WhatsApp</label>
+        <input class="form-input" type="text" placeholder="(27) 9 0000-0000">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">E-mail</label>
+      <input class="form-input" type="email" placeholder="seu@email.com">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Bairro (Serra – ES)</label>
+      <select class="form-select">
+        <option value="">Selecione seu bairro</option>
+        <option>Laranjeiras</option>
+        <option>Carapina</option>
+        <option>Jacaraípe</option>
+        <option>Nova Almeida</option>
+      </select>
+    </div>
+    <label class="checkbox-label">
+      <input type="checkbox"> Declaro que sou residente da Serra, ES e me enquadro nos critérios do programa.
+    </label>
+    <button class="btn-full btn-full-primary" onclick="showPage('login')">Continuar →</button>
+    <div style="text-align:center; margin-top:14px; font-size:12px; color:var(--cinza-texto);">Já tem conta? <a href="#" onclick="showPage('login')" style="color:var(--azul-secundario);">Entrar</a></div>
+  </div>
+</div>

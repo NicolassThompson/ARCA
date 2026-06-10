@@ -1,0 +1,71 @@
+<!-- DASHBOARD > RESGATE -->
+<div class="page-header">
+  <div class="page-title">Solicitar resgate</div>
+</div>
+<div class="form-layout">
+  <div class="form-card">
+    <div class="form-card-header" style="background: #C94C2A;">
+      <div class="form-card-header-icon">🚑</div>
+      <div>
+        <h3>Resgate de animal</h3>
+        <p>Situações graves: atropelamento, ferimento</p>
+      </div>
+    </div>
+    <div class="alert-warning">
+      ⚠️ <span>Este serviço é exclusivo para emergências. Não utilize para solicitações de adoção ou guarda.</span>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Tipo de situação</label>
+      <select class="form-select">
+        <option>Atropelamento</option>
+        <option>Ferimento grave</option>
+        <option>Animal em sofrimento</option>
+        <option>Outro</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Gravidade da situação</label>
+      <div class="severity-grid">
+        <button class="severity-btn">Moderado</button>
+        <button class="severity-btn selected">Grave</button>
+        <button class="severity-btn">Urgente</button>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Endereço do ocorrido</label>
+      <input class="form-input" type="text" placeholder="Rua, número, bairro — Serra, ES">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Ponto de referência</label>
+      <input class="form-input" type="text" placeholder="Próximo a...">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Descrição da situação</label>
+      <textarea class="form-textarea" placeholder="Descreva o estado do animal, espécie, porte e qualquer detalhe relevante..."></textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Fotos / evidências (opcional)</label>
+      <div class="photo-upload">📷 Toque para adicionar fotos</div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Seu telefone para contato</label>
+      <input class="form-input" type="text" placeholder="(27) 9 0000-0000">
+    </div>
+    <div class="toggle-row">
+      <span>Enviar denúncia anonimamente</span>
+      <div class="toggle"></div>
+    </div>
+    <button class="btn-full btn-full-primary" style="background:var(--vermelho); font-family:inherit; font-size:14px;">🚑 Enviar solicitação de resgate</button>
+  </div>
+  <div class="form-card-side">
+    <h4>⚠️ Importante</h4>
+    <p style="font-size:12px; color:var(--cinza-texto); line-height:1.6; margin-bottom:16px;">Este serviço atende exclusivamente situações de emergência animal na cidade da Serra – ES.</p>
+    <p style="font-size:12px; color:var(--cinza-texto); line-height:1.6; margin-bottom:16px;">Após o envio, nossa equipe analisará a solicitação e entrará em contato pelo número informado.</p>
+    <div style="background:#FCEBEB; border-radius:var(--radius); padding:14px; font-size:12px; color:#A32D2D; line-height:1.5; margin-bottom:16px;">
+      🚨 Em caso de extrema urgência ligue diretamente:<br><strong style="font-size:15px;">(27) 3291-0000</strong>
+    </div>
+    <h4 style="margin-top:16px; margin-bottom:10px;">Tempo médio de resposta</h4>
+    <div class="summary-item"><span class="label">Situação grave</span><span class="value" style="color:var(--vermelho);">20–40 min</span></div>
+    <div class="summary-item"><span class="label">Situação urgente</span><span class="value" style="color:var(--vermelho);">10–20 min</span></div>
+  </div>
+</div>
