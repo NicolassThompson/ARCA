@@ -1,0 +1,180 @@
+<!-- DASHBOARD > ACOMPANHAMENTO DE SOLICITAÇÃO -->
+<div class="page-header">
+  <div class="page-title">Acompanhar solicitação</div>
+</div>
+
+<!-- Tabs -->
+<div style="display:flex;gap:8px;margin-bottom:20px;">
+  <button id="tab-denuncia" onclick="switchAcompTab('denuncia')" style="padding:8px 18px;border-radius:20px;border:none;background:var(--azul-primario);color:white;font-size:13px;font-family:inherit;cursor:pointer;display:flex;align-items:center;gap:6px;">
+    <i data-lucide="alert-triangle" style="width:13px;height:13px;"></i> Denúncia
+  </button>
+  <button id="tab-resgate" onclick="switchAcompTab('resgate')" style="padding:8px 18px;border-radius:20px;border:1px solid var(--border);background:white;color:var(--cinza-texto);font-size:13px;font-family:inherit;cursor:pointer;display:flex;align-items:center;gap:6px;">
+    <i data-lucide="ambulance" style="width:13px;height:13px;"></i> Resgate
+  </button>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 300px;gap:20px;">
+
+  <!-- Coluna principal -->
+  <div>
+
+    <!-- Cabeçalho da denúncia -->
+    <div style="background:#A32D2D;border-radius:var(--radius-lg);padding:16px 20px;display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+      <div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.7);margin-bottom:2px;">Denúncia de maus-tratos</div>
+        <div style="font-size:14px;font-weight:600;color:white;">Protocolo #DEN-2026-00892</div>
+      </div>
+      <span style="background:rgba(255,255,255,0.15);color:white;font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,0.3);">Em análise</span>
+    </div>
+
+    <!-- Detalhes -->
+    <div style="background:white;border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;margin-bottom:16px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;margin-bottom:0;">
+        <div>
+          <div style="font-size:11px;color:var(--cinza-texto);text-transform:uppercase;margin-bottom:4px;">Tipo</div>
+          <div style="font-size:13px;font-weight:500;">Negligência</div>
+        </div>
+        <div>
+          <div style="font-size:11px;color:var(--cinza-texto);text-transform:uppercase;margin-bottom:4px;">Gravidade</div>
+          <div style="font-size:13px;font-weight:500;">Grave</div>
+        </div>
+        <div>
+          <div style="font-size:11px;color:var(--cinza-texto);text-transform:uppercase;margin-bottom:4px;">Data</div>
+          <div style="font-size:13px;font-weight:500;">03/06/2026 14h22</div>
+        </div>
+        <div>
+          <div style="font-size:11px;color:var(--cinza-texto);text-transform:uppercase;margin-bottom:4px;">Anônimo</div>
+          <div style="font-size:13px;font-weight:500;">Sim</div>
+        </div>
+      </div>
+      <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--cinza-fundo);">
+        <div style="font-size:11px;color:var(--cinza-texto);text-transform:uppercase;margin-bottom:4px;">Endereço</div>
+        <div style="font-size:13px;font-weight:500;">R. das Palmeiras, 123 – Laranjeiras</div>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div style="background:white;border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;margin-bottom:16px;">
+      <h4 style="font-size:14px;font-weight:600;margin-bottom:20px;">Acompanhamento em tempo real</h4>
+
+      <div style="display:flex;flex-direction:column;gap:0;">
+
+        <div style="display:flex;gap:14px;align-items:flex-start;padding-bottom:20px;position:relative;">
+          <div style="width:22px;height:22px;border-radius:50%;background:var(--verde);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;">
+            <i data-lucide="check" style="width:12px;height:12px;color:white;"></i>
+          </div>
+          <div style="position:absolute;left:10px;top:22px;width:2px;height:calc(100% - 4px);background:var(--laranja);"></div>
+          <div>
+            <div style="font-size:13px;font-weight:600;">Recebido</div>
+            <div style="font-size:12px;color:var(--cinza-texto);">Solicitação registrada no sistema</div>
+            <div style="font-size:11px;color:var(--cinza-texto);margin-top:2px;">03/06 14h22</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:14px;align-items:flex-start;padding-bottom:20px;position:relative;">
+          <div style="width:22px;height:22px;border-radius:50%;background:var(--laranja);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;box-shadow:0 0 0 4px rgba(232,152,58,0.2);">
+            <div style="width:6px;height:6px;border-radius:50%;background:white;"></div>
+          </div>
+          <div style="position:absolute;left:10px;top:22px;width:2px;height:calc(100% - 4px);background:var(--border);"></div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--laranja);">Em análise</div>
+            <div style="font-size:12px;color:var(--cinza-texto);">Equipe avaliando a situação</div>
+            <div style="font-size:11px;color:var(--cinza-texto);margin-top:2px;">03/06 14h35</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:14px;align-items:flex-start;padding-bottom:20px;position:relative;opacity:0.4;">
+          <div style="width:22px;height:22px;border-radius:50%;background:var(--cinza-fundo);border:2px solid var(--border);flex-shrink:0;z-index:1;"></div>
+          <div style="position:absolute;left:10px;top:22px;width:2px;height:calc(100% - 4px);background:var(--border);"></div>
+          <div>
+            <div style="font-size:13px;font-weight:500;">Em campo</div>
+            <div style="font-size:12px;color:var(--cinza-texto);">Agente verificando a situação</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:14px;align-items:flex-start;padding-bottom:20px;position:relative;opacity:0.4;">
+          <div style="width:22px;height:22px;border-radius:50%;background:var(--cinza-fundo);border:2px solid var(--border);flex-shrink:0;z-index:1;"></div>
+          <div style="position:absolute;left:10px;top:22px;width:2px;height:calc(100% - 4px);background:var(--border);"></div>
+          <div>
+            <div style="font-size:13px;font-weight:500;">Fiscalização realizada</div>
+            <div style="font-size:12px;color:var(--cinza-texto);">Inspeção concluída e laudo gerado</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:14px;align-items:flex-start;opacity:0.4;">
+          <div style="width:22px;height:22px;border-radius:50%;background:var(--cinza-fundo);border:2px solid var(--border);flex-shrink:0;z-index:1;"></div>
+          <div>
+            <div style="font-size:13px;font-weight:500;">Concluído</div>
+            <div style="font-size:12px;color:var(--cinza-texto);">Caso encerrado com providências</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Fotos enviadas -->
+    <div style="background:white;border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;">
+      <h4 style="font-size:14px;font-weight:600;margin-bottom:14px;">Fotos enviadas</h4>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+        <div style="aspect-ratio:1;background:var(--cinza-fundo);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;">
+          <i data-lucide="image" style="width:20px;height:20px;color:var(--cinza-texto);"></i>
+        </div>
+        <div style="aspect-ratio:1;background:var(--cinza-fundo);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;">
+          <i data-lucide="image" style="width:20px;height:20px;color:var(--cinza-texto);"></i>
+        </div>
+        <div style="aspect-ratio:1;background:var(--cinza-fundo);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;border:1px dashed var(--border);cursor:pointer;" onclick="openModal('Adicionar foto', 'Upload de fotos adicionais em desenvolvimento.')">
+          <i data-lucide="plus" style="width:20px;height:20px;color:var(--cinza-texto);"></i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Sidebar -->
+  <div>
+
+    <!-- Contato de emergência -->
+    <div style="background:#FCEBEB;border:1px solid #F0C5C5;border-radius:var(--radius-lg);padding:20px;margin-bottom:16px;">
+      <h4 style="font-size:13px;font-weight:600;color:#A32D2D;margin-bottom:8px;">Urgência extrema?</h4>
+      <div style="font-size:22px;font-weight:700;color:#A32D2D;margin-bottom:4px;">(27) 3291-0000</div>
+      <div style="font-size:12px;color:#A32D2D;opacity:0.8;">Ligue diretamente para a Defesa Animal</div>
+    </div>
+
+    <!-- Tempo médio -->
+    <div style="background:white;border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;">
+      <h4 style="font-size:13px;font-weight:600;margin-bottom:14px;">Tempo médio de resposta</h4>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--cinza-fundo);">
+        <span style="font-size:13px;color:var(--cinza-texto);">Situação grave</span>
+        <span style="font-size:13px;font-weight:600;color:#A32D2D;">20–40 min</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;">
+        <span style="font-size:13px;color:var(--cinza-texto);">Situação urgente</span>
+        <span style="font-size:13px;font-weight:600;color:#A32D2D;">10–20 min</span>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function switchAcompTab(tab) {
+  const btnDenuncia = document.getElementById('tab-denuncia');
+  const btnResgate = document.getElementById('tab-resgate');
+  if (tab === 'denuncia') {
+    btnDenuncia.style.background = 'var(--azul-primario)';
+    btnDenuncia.style.color = 'white';
+    btnDenuncia.style.border = 'none';
+    btnResgate.style.background = 'white';
+    btnResgate.style.color = 'var(--cinza-texto)';
+    btnResgate.style.border = '1px solid var(--border)';
+  } else {
+    btnResgate.style.background = 'var(--azul-primario)';
+    btnResgate.style.color = 'white';
+    btnResgate.style.border = 'none';
+    btnDenuncia.style.background = 'white';
+    btnDenuncia.style.color = 'var(--cinza-texto)';
+    btnDenuncia.style.border = '1px solid var(--border)';
+  }
+}
+</script>

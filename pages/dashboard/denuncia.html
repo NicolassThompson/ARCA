@@ -1,0 +1,66 @@
+<!-- DASHBOARD > DENÚNCIA -->
+<div class="page-header">
+  <div class="page-title">Denunciar maus-tratos</div>
+</div>
+<div class="form-layout">
+  <div class="form-card">
+    <div class="form-card-header" style="background: #A32D2D;">
+      <div class="form-card-header-icon">🚨</div>
+      <div>
+        <h3>Denúncia de maus-tratos</h3>
+        <p>Todas as denúncias são encaminhadas à vigilância sanitária e defesa animal</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Tipo de denúncia</label>
+      <select class="form-select">
+        <option>Maus-tratos físicos</option>
+        <option>Abandono</option>
+        <option>Envenenamento</option>
+        <option>Outros</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Gravidade da situação</label>
+      <div class="severity-grid">
+        <button class="severity-btn">Moderado</button>
+        <button class="severity-btn selected">Grave</button>
+        <button class="severity-btn">Urgente</button>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Endereço do ocorrido</label>
+      <input class="form-input" type="text" placeholder="Rua, número, bairro — Serra, ES">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Descrição</label>
+      <textarea class="form-textarea" placeholder="Descreva o que está acontecendo com o máximo de detalhes possível..." style="min-height:120px;"></textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Fotos / evidências (opcional)</label>
+      <div class="photo-upload">📷 Adicionar fotos</div>
+    </div>
+    <div class="toggle-row">
+      <span>Enviar denúncia anonimamente</span>
+      <div class="toggle"></div>
+    </div>
+    <button class="btn-full btn-full-primary" style="background:#A32D2D; font-family:inherit; font-size:14px;">🚨 Enviar denúncia</button>
+  </div>
+  <div class="form-card-side">
+    <h4>O que acontece após a denúncia?</h4>
+    <div style="margin-top:12px;">
+      <div style="display:flex; gap:10px; margin-bottom:14px;">
+        <div style="width:24px;height:24px;background:var(--azul-primario);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">1</div>
+        <div style="font-size:12px; color:var(--cinza-texto); line-height:1.5;">Denúncia recebida e protocolada pela Defesa Animal</div>
+      </div>
+      <div style="display:flex; gap:10px; margin-bottom:14px;">
+        <div style="width:24px;height:24px;background:var(--azul-primario);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">2</div>
+        <div style="font-size:12px; color:var(--cinza-texto); line-height:1.5;">Análise e verificação pelos fiscais</div>
+      </div>
+      <div style="display:flex; gap:10px;">
+        <div style="width:24px;height:24px;background:var(--verde);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">3</div>
+        <div style="font-size:12px; color:var(--cinza-texto); line-height:1.5;">Providências legais tomadas e animal amparado</div>
+      </div>
+    </div>
+  </div>
+</div>

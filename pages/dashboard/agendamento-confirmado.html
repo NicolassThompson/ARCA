@@ -1,0 +1,60 @@
+<!-- DASHBOARD > AGENDAMENTO CONFIRMADO -->
+<div style="max-width:520px; margin:40px auto; text-align:center;">
+
+  <!-- Ícone de sucesso -->
+  <div style="width:72px;height:72px;background:#EAF7EE;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+    <i data-lucide="check-circle-2" style="width:36px;height:36px;color:var(--verde);"></i>
+  </div>
+
+  <h2 style="font-size:20px;font-weight:700;margin-bottom:6px;">Agendamento confirmado!</h2>
+  <p style="font-size:14px;color:var(--cinza-texto);margin-bottom:28px;">Seu agendamento foi registrado com sucesso. Você pode acompanhar os detalhes abaixo.</p>
+
+  <!-- Card de resumo -->
+  <div style="background:white;border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;text-align:left;margin-bottom:20px;">
+    <h4 style="font-size:13px;font-weight:600;color:var(--cinza-texto);margin-bottom:16px;text-transform:uppercase;letter-spacing:0.5px;">Resumo do agendamento</h4>
+    <div style="display:flex;flex-direction:column;gap:0;">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--cinza-fundo);">
+        <span style="font-size:13px;color:var(--cinza-texto);">Animal</span>
+        <span style="font-size:13px;font-weight:500;">Mia</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--cinza-fundo);">
+        <span style="font-size:13px;color:var(--cinza-texto);">Serviço</span>
+        <span style="font-size:13px;font-weight:500;">Castração gratuita</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--cinza-fundo);">
+        <span style="font-size:13px;color:var(--cinza-texto);">Data</span>
+        <span style="font-size:13px;font-weight:500;">10 de junho de 2026</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--cinza-fundo);">
+        <span style="font-size:13px;color:var(--cinza-texto);">Horário</span>
+        <span style="font-size:13px;font-weight:500;">08h00</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;">
+        <span style="font-size:13px;color:var(--cinza-texto);">Protocolo</span>
+        <span style="font-size:13px;font-weight:600;color:var(--azul-primario);">#ARCA-2025-00842</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Aviso de jejum -->
+  <div class="alert-warning" style="text-align:left; margin-bottom:20px;">
+    ⚠️ <span><strong>Lembre-se:</strong> Jejum de 8h antes do procedimento. Leve CPF e comprovante de residência.</span>
+  </div>
+
+  <!-- Botão principal -->
+  <button onclick="showDashPage('agenda')" style="width:100%;padding:13px;border:none;border-radius:var(--radius);background:var(--azul-primario);color:white;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;margin-bottom:12px;">
+    <i data-lucide="calendar" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:6px;"></i>
+    Ver na Agenda
+  </button>
+
+  <!-- Links secundários -->
+  <div style="display:flex;justify-content:center;gap:24px;">
+    <button onclick="showDashPage('detalhes-agendamento')" style="background:none;border:none;cursor:pointer;color:var(--azul-secundario);font-size:13px;font-family:inherit;">
+      Ver detalhes completos
+    </button>
+    <button onclick="showDashPage('home')" style="background:none;border:none;cursor:pointer;color:var(--cinza-texto);font-size:13px;font-family:inherit;">
+      Voltar ao início
+    </button>
+  </div>
+
+</div>

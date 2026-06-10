@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programa ARCA — Desktop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<!-- TOAST CONTAINER -->
+<div id="toast-container"></div>
+
+<!-- MODAL OVERLAY -->
+<div class="modal-overlay" id="global-modal-overlay">
+  <div class="modal">
+    <div class="modal-icon" id="modal-icon-container">
+      <i data-lucide="check-circle-2" style="width:32px; height:32px;"></i>
+    </div>
+    <h3 id="modal-title">Sucesso!</h3>
+    <p id="modal-msg">Ação concluída com êxito.</p>
+    <button class="btn-primary" onclick="closeModal()" style="width: 100%;">Entendido</button>
+  </div>
+</div>
+
+<!-- MODAL DETALHES DO PET -->
+<div class="modal-overlay" id="pet-details-modal-overlay">
+  <div class="modal" style="width: 600px; max-width: 95vw; padding: 0; overflow: hidden; text-align: left;">
+    <div id="pet-details-banner" style="height: 200px; background: var(--azul-primario); position: relative; display: flex; align-items: center; justify-content: center; font-size: 64px;">
+      <!-- Ícone ou Imagem do Pet -->
+    </div>
+    <div style="padding: 24px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+        <div>
+          <h2 id="pet-details-name" style="font-size: 24px; font-weight: 700;">Nome do Pet</h2>
+          <p id="pet-details-subtitle" style="color: var(--cinza-texto); font-size: 14px;">Espécie • Idade • Sexo</p>
+        </div>
+        <span id="pet-details-status" class="status-pill status-green">Disponível</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px;">
+        <div style="background: var(--cinza-fundo); padding: 12px; border-radius: var(--radius); text-align: center;">
+          <div style="font-size: 11px; color: var(--cinza-texto); text-transform: uppercase;">Porte</div>
+          <div id="pet-details-size" style="font-weight: 600; margin-top: 4px;">Médio</div>
+        </div>
+        <div style="background: var(--cinza-fundo); padding: 12px; border-radius: var(--radius); text-align: center;">
+          <div style="font-size: 11px; color: var(--cinza-texto); text-transform: uppercase;">Temperamento</div>
+          <div id="pet-details-temperament" style="font-weight: 600; margin-top: 4px;">Dócil</div>
+        </div>
+        <div style="background: var(--cinza-fundo); padding: 12px; border-radius: var(--radius); text-align: center;">
+          <div style="font-size: 11px; color: var(--cinza-texto); text-transform: uppercase;">Saúde</div>
+          <div id="pet-details-health" style="font-weight: 600; margin-top: 4px;">Vacinado</div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 24px;">
+        <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 8px;">História</h4>
+        <p id="pet-details-history" style="font-size: 13px; color: var(--cinza-texto); line-height: 1.6;">
+          Carregando história...
+        </p>
+      </div>
+
+      <div style="display: flex; gap: 12px;">
+        <button class="btn-primary" onclick="requestAdoptionFromDetails()" style="flex: 1;">Quero adotar este pet</button>
+        <button class="btn-outline" onclick="closePetDetails()" style="color: var(--cinza-texto); border-color: var(--border);">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="main-nav">
+  <a class="nav-logo" href="#" onclick="showPage('landing')">
+    <div class="nav-logo-icon"><i data-lucide="paw-print"></i></div>
+    Programa ARCA
+  </a>
+  <span class="nav-badge">Serra · ES</span>
+  <div class="nav-links" id="nav-links-public"></div>
+  <div class="nav-links" id="nav-links-auth" style="display:none">
+    <a class="nav-link" href="#" onclick="showDashPage('home')">Início</a>
+    <a class="nav-link" href="#" onclick="showDashPage('pets')">Meus pets</a>
+    <a class="nav-link" href="#" onclick="showDashPage('agenda')">Agenda</a>
+    <a class="nav-link" href="#" onclick="showDashPage('edu')">Educação</a>
+    <a class="nav-link" href="#" onclick="showDashPage('profile')">Perfil</a>
+  </div>
+  <button class="nav-cta" id="nav-cta-btn" onclick="showPage('login')">Cadastrar animal</button>
+  <div id="nav-user-icons" style="display:none">
+    <div class="nav-icon-btn">
+      <i data-lucide="bell"></i>
+      <div class="nav-notif"></div>
+    </div>
+    <div class="nav-icon-btn" onclick="logout()" title="Sair">
+      <i data-lucide="log-out"></i>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT CONTAINER -->
+<div id="app-container">
+  <!-- Pages will be loaded here dynamically -->
+</div>
+
+<!-- TEMPLATE FOR DASHBOARD SHELL -->
+<template id="dashboard-shell-template">
+  <div id="page-dashboard" class="page active">
+    <div class="dashboard-layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-user">
+          <div class="user-avatar">JS</div>
+          <div>
+            <div class="user-name">João Silva</div>
+            <div class="user-sub">Serra · ES</div>
+          </div>
+        </div>
+
+        <div class="sidebar-section">Principal</div>
+        <div class="sidebar-item" data-page="home" onclick="showDashPage('home')">
+          <span class="icon"><i data-lucide="home"></i></span> Home
+        </div>
+        <div class="sidebar-item" data-page="pets" onclick="showDashPage('pets')">
+          <span class="icon"><i data-lucide="paw-print"></i></span> Meus pets
+        </div>
+        <div class="sidebar-item" data-page="agenda" onclick="showDashPage('agenda')">
+          <span class="icon"><i data-lucide="calendar"></i></span> Agenda
+        </div>
+        <div class="sidebar-item" data-page="adocao" onclick="showDashPage('adocao')">
+          <span class="icon"><i data-lucide="heart"></i></span> Adoção
+        </div>
+
+        <div class="sidebar-section" style="margin-top:8px;">Serviços</div>
+        <div class="sidebar-item" data-page="castracao" onclick="showDashPage('castracao')">
+          <span class="icon"><i data-lucide="scissors"></i></span> Castração
+        </div>
+        <div class="sidebar-item" data-page="resgate" onclick="showDashPage('resgate')">
+          <span class="icon"><i data-lucide="ambulance"></i></span> Solicitar resgate
+        </div>
+        <div class="sidebar-item" data-page="denuncia" onclick="showDashPage('denuncia')">
+          <span class="icon"><i data-lucide="alert-triangle"></i></span> Denunciar
+        </div>
+        <div class="sidebar-item" data-page="edu" onclick="showDashPage('edu')">
+          <span class="icon"><i data-lucide="book-open"></i></span> Educação
+        </div>
+
+        <div class="sidebar-section" style="margin-top:8px;">Conta</div>
+        <div class="sidebar-item" data-page="profile" onclick="showDashPage('profile')">
+          <span class="icon"><i data-lucide="user"></i></span> Meu perfil
+        </div>
+        <div class="sidebar-item" onclick="navigateBack()">
+          <span class="icon"><i data-lucide="arrow-left"></i></span> Voltar
+        </div>
+        <div class="sidebar-item" onclick="logout()">
+          <span class="icon"><i data-lucide="log-out"></i></span> Sair
+        </div>
+      </aside>
+
+      <!-- Main Dashboard Content -->
+      <main class="main-content" id="dashboard-content">
+        <!-- Dashboard sub-pages load here -->
+      </main>
+    </div>
+  </div>
+</template>
+
+<script src="js/store.js" defer></script>
+<script src="js/app.js" defer></script>
+</body>
+</html>

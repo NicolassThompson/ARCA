@@ -1,0 +1,97 @@
+<!-- DASHBOARD > CONFIRMAÇÃO DE RESGATE / DENÚNCIA -->
+<div style="max-width:780px; margin:40px auto;">
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+
+    <!-- Card: Resgate -->
+    <div style="background:white;border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;text-align:center;">
+      <!-- Ícone -->
+      <div style="width:64px;height:64px;margin:0 auto 20px;position:relative;">
+        <div style="width:64px;height:64px;background:#FCEBEB;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+          <i data-lucide="ambulance" style="width:28px;height:28px;color:#A32D2D;"></i>
+        </div>
+      </div>
+
+      <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:14px;">Resgate</span>
+      <h3 style="font-size:17px;font-weight:700;margin-bottom:8px;">Solicitação de resgate enviada!</h3>
+      <p style="font-size:13px;color:var(--cinza-texto);line-height:1.6;margin-bottom:20px;">Nossa equipe analisará e entrará em contato pelo número informado em breve.</p>
+
+      <!-- Número de protocolo -->
+      <div style="background:var(--cinza-fundo);border-radius:var(--radius);padding:14px;margin-bottom:20px;">
+        <div style="font-size:11px;color:var(--cinza-texto);margin-bottom:4px;">NÚMERO DE PROTOCOLO</div>
+        <div style="font-size:16px;font-weight:700;color:var(--azul-primario);">#RSG-2026-04471</div>
+        <div style="font-size:11px;color:var(--cinza-texto);margin-top:4px;">Guarde para acompanhar a solicitação</div>
+      </div>
+
+      <!-- Próximos passos -->
+      <div style="text-align:left;margin-bottom:20px;">
+        <div style="font-size:12px;font-weight:600;margin-bottom:10px;">O que acontece agora?</div>
+        <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start;">
+          <div style="width:18px;height:18px;background:#FCEBEB;color:#A32D2D;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;flex-shrink:0;">1</div>
+          <div style="font-size:12px;color:var(--cinza-texto);">Equipe avalia a gravidade da situação</div>
+        </div>
+        <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start;">
+          <div style="width:18px;height:18px;background:#FCEBEB;color:#A32D2D;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;flex-shrink:0;">2</div>
+          <div style="font-size:12px;color:var(--cinza-texto);">Contato pelo número informado em até 20 min</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:flex-start;">
+          <div style="width:18px;height:18px;background:#FCEBEB;color:#A32D2D;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;flex-shrink:0;">3</div>
+          <div style="font-size:12px;color:var(--cinza-texto);">Equipe de campo deslocada ao local</div>
+        </div>
+      </div>
+
+      <button onclick="showDashPage('acompanhamento')" class="btn-full btn-full-primary" style="font-family:inherit;font-size:13px;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:10px;">
+        <i data-lucide="search" style="width:14px;height:14px;"></i> Acompanhar solicitação
+      </button>
+      <button onclick="showDashPage('home')" style="background:none;border:none;cursor:pointer;font-size:13px;color:var(--cinza-texto);font-family:inherit;width:100%;">
+        Voltar ao início
+      </button>
+    </div>
+
+    <!-- Card: Denúncia -->
+    <div style="background:white;border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;text-align:center;">
+      <!-- Ícone -->
+      <div style="width:64px;height:64px;margin:0 auto 20px;">
+        <div style="width:64px;height:64px;background:#EAF3DE;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+          <i data-lucide="check" style="width:32px;height:32px;color:var(--verde);stroke-width:3;"></i>
+        </div>
+      </div>
+
+      <span style="background:#EAF3DE;color:#3B6D11;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:14px;">Denúncia</span>
+      <h3 style="font-size:17px;font-weight:700;margin-bottom:8px;">Denúncia registrada com sucesso!</h3>
+      <p style="font-size:13px;color:var(--cinza-texto);line-height:1.6;margin-bottom:20px;">Encaminhada à Defesa Animal e Vigilância Sanitária de Serra – ES.</p>
+
+      <!-- Número de protocolo -->
+      <div style="background:var(--cinza-fundo);border-radius:var(--radius);padding:14px;margin-bottom:20px;">
+        <div style="font-size:11px;color:var(--cinza-texto);margin-bottom:4px;">NÚMERO DE PROTOCOLO</div>
+        <div style="font-size:16px;font-weight:700;color:var(--azul-primario);">#DEN-2026-00892</div>
+        <div style="font-size:11px;color:var(--cinza-texto);margin-top:4px;">Guarde para acompanhar a denúncia</div>
+      </div>
+
+      <!-- Próximos passos -->
+      <div style="text-align:left;margin-bottom:20px;">
+        <div style="font-size:12px;font-weight:600;margin-bottom:10px;">O que acontece agora?</div>
+        <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start;">
+          <div style="width:18px;height:18px;background:#EAF3DE;color:#3B6D11;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;flex-shrink:0;">1</div>
+          <div style="font-size:12px;color:var(--cinza-texto);">Denúncia protocolada pela Defesa Animal</div>
+        </div>
+        <div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start;">
+          <div style="width:18px;height:18px;background:#EAF3DE;color:#3B6D11;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;flex-shrink:0;">2</div>
+          <div style="font-size:12px;color:var(--cinza-texto);">Equipe realiza inspeção no local</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:flex-start;">
+          <div style="width:18px;height:18px;background:#EAF3DE;color:#3B6D11;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;flex-shrink:0;">3</div>
+          <div style="font-size:12px;color:var(--cinza-texto);">Ação tomada conforme gravidade</div>
+        </div>
+      </div>
+
+      <button onclick="showDashPage('acompanhamento')" class="btn-full btn-full-primary" style="font-family:inherit;font-size:13px;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:10px;">
+        <i data-lucide="search" style="width:14px;height:14px;"></i> Acompanhar denúncia
+      </button>
+      <button onclick="showDashPage('home')" style="background:none;border:none;cursor:pointer;font-size:13px;color:var(--cinza-texto);font-family:inherit;width:100%;">
+        Voltar ao início
+      </button>
+    </div>
+
+  </div>
+</div>

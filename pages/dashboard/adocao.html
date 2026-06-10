@@ -1,0 +1,99 @@
+<!-- DASHBOARD > ADOÇÃO -->
+<div class="page-header">
+  <div class="page-title">Adoção de Animais</div>
+  <div style="font-size:13px; color:var(--cinza-texto);">Encontre seu novo melhor amigo</div>
+</div>
+
+<div class="adoption-filters" style="display: flex; gap: 10px; margin-bottom: 20px;">
+  <button class="filter-btn active" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--azul-primario); background: var(--azul-primario); color: white; cursor: pointer; font-size: 13px;">Todos</button>
+  <button class="filter-btn" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--cinza-borda); background: white; color: var(--cinza-texto); cursor: pointer; font-size: 13px;">Cães</button>
+  <button class="filter-btn" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--cinza-borda); background: white; color: var(--cinza-texto); cursor: pointer; font-size: 13px;">Gatos</button>
+</div>
+
+<div class="pets-grid">
+
+  <!-- Card: Luna -->
+  <div class="pet-card">
+    <div class="pet-card-header" style="background: linear-gradient(135deg, #FF9A9E 0%, #FAD0C4 100%);">
+      <div style="width:36px;height:36px;background:rgba(255,255,255,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">
+        <i data-lucide="dog"></i>
+      </div>
+      <div>
+        <div class="pet-card-name">Luna</div>
+        <div class="pet-card-desc">Cão · Fêmea · 2 anos · Golden Retriever</div>
+      </div>
+    </div>
+    <div class="pet-card-body">
+      <p style="font-size: 13px; color: var(--cinza-texto); margin-bottom: 15px;">Dócil, brincalhona e se dá muito bem com crianças. Já está vacinada e castrada.</p>
+      <div class="pet-detail-row">
+        <span class="pet-detail-label">Porte</span>
+        <span style="font-size:12px; font-weight:500;">Médio</span>
+      </div>
+      <div class="pet-detail-row">
+        <span class="pet-detail-label">Status</span>
+        <span class="status-pill status-green">Disponível</span>
+      </div>
+      <div class="pet-detail-row" style="margin-top:15px; gap: 8px;">
+        <button class="btn-primary" onclick="requestAdoptionFromDetails()" style="flex: 1; padding: 10px; font-size: 13px;">Quero adotar</button>
+        <button class="btn-outline" onclick="openPetDetails('luna')" style="padding: 10px; font-size: 13px; color: var(--cinza-texto); border-color: var(--border);">Detalhes</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card: Thor -->
+  <div class="pet-card">
+    <div class="pet-card-header" style="background: linear-gradient(135deg, #A1C4FD 0%, #C2E9FB 100%);">
+      <div style="width:36px;height:36px;background:rgba(255,255,255,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">
+        <i data-lucide="cat"></i>
+      </div>
+      <div>
+        <div class="pet-card-name">Thor</div>
+        <div class="pet-card-desc">Gato · Macho · 1 ano · SRD</div>
+      </div>
+    </div>
+    <div class="pet-card-body">
+      <p style="font-size: 13px; color: var(--cinza-texto); margin-bottom: 15px;">Independente e calmo. Adora um cantinho ensolarado para tirar um cochilo.</p>
+      <div class="pet-detail-row">
+        <span class="pet-detail-label">Porte</span>
+        <span style="font-size:12px; font-weight:500;">Pequeno</span>
+      </div>
+      <div class="pet-detail-row">
+        <span class="pet-detail-label">Status</span>
+        <span class="status-pill status-green">Disponível</span>
+      </div>
+      <div class="pet-detail-row" style="margin-top:15px; gap: 8px;">
+        <button class="btn-primary" onclick="requestAdoptionFromDetails()" style="flex: 1; padding: 10px; font-size: 13px;">Quero adotar</button>
+        <button class="btn-outline" onclick="openPetDetails('thor')" style="padding: 10px; font-size: 13px; color: var(--cinza-texto); border-color: var(--border);">Detalhes</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card: Mel -->
+  <div class="pet-card">
+    <div class="pet-card-header" style="background: linear-gradient(135deg, #F6D365 0%, #FDA085 100%);">
+      <div style="width:36px;height:36px;background:rgba(255,255,255,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">
+        <i data-lucide="dog"></i>
+      </div>
+      <div>
+        <div class="pet-card-name">Mel</div>
+        <div class="pet-card-desc">Cão · Fêmea · 4 anos · Vira-lata</div>
+      </div>
+    </div>
+    <div class="pet-card-body">
+      <p style="font-size: 13px; color: var(--cinza-texto); margin-bottom: 15px;">Muito carinhosa e obediente. Busca um lar tranquilo para receber amor.</p>
+      <div class="pet-detail-row">
+        <span class="pet-detail-label">Porte</span>
+        <span style="font-size:12px; font-weight:500;">Pequeno</span>
+      </div>
+      <div class="pet-detail-row">
+        <span class="pet-detail-label">Status</span>
+        <span class="status-pill status-blue">Em processo</span>
+      </div>
+      <div class="pet-detail-row" style="margin-top:15px; gap: 8px;">
+        <button class="btn-primary" style="flex: 1; padding: 10px; font-size: 13px; background: var(--cinza-borda); color: var(--cinza-texto); cursor: not-allowed;" disabled>Em processo</button>
+        <button class="btn-outline" onclick="openPetDetails('mel')" style="padding: 10px; font-size: 13px; color: var(--cinza-texto); border-color: var(--border);">Detalhes</button>
+      </div>
+    </div>
+  </div>
+
+</div>

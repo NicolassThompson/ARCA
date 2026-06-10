@@ -1,0 +1,107 @@
+<!-- DASHBOARD > CADASTRO DE PET -->
+<div class="page-header">
+  <div class="page-title">Cadastrar novo animal</div>
+  <button class="action-btn action-btn-gray" onclick="showDashPage('pets')" style="font-size:13px; padding:8px 16px; cursor:pointer;">← Voltar para meus pets</button>
+</div>
+<div class="form-layout">
+  <div class="form-card">
+    <div class="form-card-header" style="background: #0E7C5F;">
+      <div class="form-card-header-icon">🐾</div>
+      <div>
+        <h3>Dados do animal</h3>
+        <p>Preencha as informações do seu pet para cadastrá-lo no sistema</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Nome do animal</label>
+      <input class="form-input" type="text" placeholder="Ex: Rex, Mia, Thor...">
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+      <div class="form-group">
+        <label class="form-label">Espécie</label>
+        <select class="form-select" id="cadastro-especie">
+          <option value="">Selecione</option>
+          <option value="cao">🐕 Cão</option>
+          <option value="gato">🐈 Gato</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Sexo</label>
+        <select class="form-select">
+          <option value="">Selecione</option>
+          <option>Macho</option>
+          <option>Fêmea</option>
+        </select>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+      <div class="form-group">
+        <label class="form-label">Raça</label>
+        <input class="form-input" type="text" placeholder="Ex: Vira-lata, SRD, Labrador...">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Cor / pelagem</label>
+        <input class="form-input" type="text" placeholder="Ex: Caramelo, preto, malhado...">
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+      <div class="form-group">
+        <label class="form-label">Idade aproximada</label>
+        <div style="display:flex; gap:8px;">
+          <input class="form-input" type="number" placeholder="0" min="0" style="width:70px;">
+          <select class="form-select">
+            <option>anos</option>
+            <option>meses</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Porte</label>
+        <select class="form-select">
+          <option value="">Selecione</option>
+          <option>Pequeno (até 10 kg)</option>
+          <option>Médio (10–25 kg)</option>
+          <option>Grande (acima de 25 kg)</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">O animal é castrado?</label>
+      <div class="severity-grid">
+        <button class="severity-btn" type="button">Sim</button>
+        <button class="severity-btn" type="button">Não</button>
+        <button class="severity-btn" type="button">Não sei</button>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Foto do animal (opcional)</label>
+      <div class="photo-upload">📷 Toque para adicionar uma foto do pet</div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Observações (opcional)</label>
+      <textarea class="form-textarea" placeholder="Condições de saúde, temperamento, necessidades especiais..."></textarea>
+    </div>
+    <label class="checkbox-label">
+      <input type="checkbox"> Declaro que sou o responsável por este animal e que as informações são verdadeiras.
+    </label>
+    <button class="btn-full btn-full-primary" style="font-size:14px; font-family:inherit; margin-top:8px;" onclick="showDashPage('pets')">🐾 Cadastrar animal</button>
+  </div>
+  <div class="form-card-side">
+    <h4>ℹ️ Sobre o cadastro</h4>
+    <p style="font-size:12px; color:var(--cinza-texto); line-height:1.6; margin-bottom:16px;">O cadastro do animal é necessário para acessar os serviços do Programa ARCA, como castração, microchipagem e atendimento veterinário.</p>
+    <div style="background:var(--cinza-fundo); border-radius:var(--radius); padding:14px; font-size:12px; color:var(--cinza-texto); line-height:1.5; margin-bottom:16px;">
+      📋 <strong>Após o cadastro você poderá:</strong><br><br>
+      • Agendar castração gratuita<br>
+      • Solicitar microchipagem<br>
+      • Acompanhar histórico de saúde<br>
+      • Receber lembretes de vacinas
+    </div>
+    <h4 style="margin-top:16px; margin-bottom:10px;">📎 Documentos necessários</h4>
+    <div class="summary-item"><span class="label">Responsável</span><span class="value">RG ou CPF</span></div>
+    <div class="summary-item"><span class="label">Residência</span><span class="value">Comprovante</span></div>
+    <div class="summary-item"><span class="label">Animal</span><span class="value">Foto (opcional)</span></div>
+    <div style="margin-top:20px; background:#EAF3DE; border-radius:var(--radius); padding:14px; font-size:12px; color:#3B6D11; line-height:1.5;">
+      ✅ O cadastro é gratuito e leva menos de 2 minutos.
+    </div>
+  </div>
+</div>

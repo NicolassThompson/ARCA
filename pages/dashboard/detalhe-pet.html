@@ -1,0 +1,152 @@
+<!-- DASHBOARD > DETALHE DO PET -->
+<div class="page-header">
+  <div style="display:flex; align-items:center; gap:10px;">
+    <button onclick="showDashPage('pets')" style="background:none;border:none;cursor:pointer;color:var(--azul-secundario);font-size:13px;font-family:inherit;padding:0;display:flex;align-items:center;gap:4px;">
+      <i data-lucide="arrow-left" style="width:16px;height:16px;"></i> Meus pets
+    </button>
+  </div>
+</div>
+
+<div style="display:grid; grid-template-columns:1fr 260px; gap:20px;">
+
+  <!-- Coluna principal -->
+  <div>
+    <!-- Cabeçalho do pet -->
+    <div style="background:linear-gradient(135deg,#185FA5,#1A6DBB);border-radius:var(--radius-lg);padding:24px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">
+      <div style="display:flex;align-items:center;gap:16px;">
+        <div style="width:56px;height:56px;background:rgba(255,255,255,0.2);border-radius:14px;display:flex;align-items:center;justify-content:center;">
+          <i data-lucide="dog" style="width:28px;height:28px;color:white;"></i>
+        </div>
+        <div>
+          <h2 style="font-size:20px;font-weight:700;color:white;margin-bottom:4px;">Rex</h2>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <span style="background:rgba(255,255,255,0.25);color:white;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;">Castrado</span>
+            <span style="background:rgba(232,152,58,0.4);color:#FDE68A;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;">Vacinação em andamento</span>
+          </div>
+        </div>
+      </div>
+      <button onclick="openModal('Editar pet', 'Funcionalidade de edição disponível em breve.')" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:var(--radius);padding:8px 14px;color:white;font-size:13px;font-family:inherit;cursor:pointer;">
+        <i data-lucide="pencil" style="width:13px;height:13px;display:inline;vertical-align:middle;margin-right:4px;"></i> Editar
+      </button>
+    </div>
+
+    <!-- Informações cadastrais -->
+    <div style="background:white;border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;margin-bottom:16px;">
+      <h4 style="font-size:14px;font-weight:600;margin-bottom:16px;">Informações cadastrais</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div>
+          <div style="font-size:11px;color:var(--cinza-texto);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px;">Microchip</div>
+          <div style="font-size:13px;font-weight:500;font-family:monospace;">4002892200000</div>
+        </div>
+        <div>
+          <div style="font-size:11px;color:var(--cinza-texto);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px;">Pelagem</div>
+          <div style="font-size:13px;font-weight:500;">Caramelo</div>
+        </div>
+        <div>
+          <div style="font-size:11px;color:var(--cinza-texto);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px;">Porte</div>
+          <div style="font-size:13px;font-weight:500;">Médio</div>
+        </div>
+        <div>
+          <div style="font-size:11px;color:var(--cinza-texto);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px;">Bairro</div>
+          <div style="font-size:13px;font-weight:500;">Laranjeiras, Serra – ES</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Saúde e serviços -->
+    <div style="background:white;border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;margin-bottom:16px;">
+      <h4 style="font-size:14px;font-weight:600;margin-bottom:16px;">Saúde e serviços</h4>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--cinza-fundo);">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:32px;height:32px;background:#EAF7EE;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+              <i data-lucide="scissors" style="width:15px;height:15px;color:var(--verde);"></i>
+            </div>
+            <div>
+              <div style="font-size:13px;font-weight:500;">Castração</div>
+              <div style="font-size:11px;color:var(--cinza-texto);">Concluído · 15 jan 2026</div>
+            </div>
+          </div>
+          <span class="status-pill status-green">Concluído</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:32px;height:32px;background:#FFF3E0;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+              <i data-lucide="syringe" style="width:15px;height:15px;color:var(--laranja);"></i>
+            </div>
+            <div>
+              <div style="font-size:13px;font-weight:500;">Vacinação</div>
+              <div style="font-size:11px;color:var(--cinza-texto);">Próxima dose: 20 jul 2026</div>
+            </div>
+          </div>
+          <span class="status-pill status-orange">Em andamento</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Histórico -->
+    <div style="background:white;border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;">
+      <h4 style="font-size:14px;font-weight:600;margin-bottom:16px;">Histórico</h4>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <div style="display:flex;gap:12px;align-items:flex-start;padding-bottom:16px;position:relative;">
+          <div style="width:8px;height:8px;border-radius:50%;background:var(--verde);margin-top:4px;flex-shrink:0;"></div>
+          <div style="position:absolute;left:3px;top:12px;width:2px;height:calc(100% - 0px);background:var(--border);"></div>
+          <div>
+            <div style="font-size:13px;font-weight:500;">Castração realizada</div>
+            <div style="font-size:11px;color:var(--cinza-texto);">Clínica Laranjeiras · 15 jan 2026</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding-bottom:16px;position:relative;">
+          <div style="width:8px;height:8px;border-radius:50%;background:var(--azul-primario);margin-top:4px;flex-shrink:0;"></div>
+          <div style="position:absolute;left:3px;top:12px;width:2px;height:calc(100% - 0px);background:var(--border);"></div>
+          <div>
+            <div style="font-size:13px;font-weight:500;">1ª dose de vacina</div>
+            <div style="font-size:11px;color:var(--cinza-texto);">CRMV Serra · 10 out 2025</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="width:8px;height:8px;border-radius:50%;background:var(--cinza-texto);margin-top:4px;flex-shrink:0;"></div>
+          <div>
+            <div style="font-size:13px;font-weight:500;">Cadastro realizado</div>
+            <div style="font-size:11px;color:var(--cinza-texto);">Plataforma ARCA · 05 set 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div>
+    <!-- Ações -->
+    <div style="background:white;border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;margin-bottom:12px;">
+      <h4 style="font-size:13px;font-weight:600;margin-bottom:14px;">Ações</h4>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <button onclick="showDashPage('castracao')" style="width:100%;padding:10px 12px;border-radius:var(--radius);border:1px solid var(--border);background:white;color:var(--texto-principal);font-size:13px;font-family:inherit;cursor:pointer;text-align:left;display:flex;align-items:center;gap:8px;">
+          <i data-lucide="scissors" style="width:14px;height:14px;color:var(--azul-primario);"></i> Agendar castração
+        </button>
+        <button onclick="showDashPage('castracao')" style="width:100%;padding:10px 12px;border-radius:var(--radius);border:1px solid var(--border);background:white;color:var(--texto-principal);font-size:13px;font-family:inherit;cursor:pointer;text-align:left;display:flex;align-items:center;gap:8px;">
+          <i data-lucide="syringe" style="width:14px;height:14px;color:var(--verde);"></i> Agendar vacinação
+        </button>
+        <button onclick="showDashPage('agenda')" style="width:100%;padding:10px 12px;border-radius:var(--radius);border:1px solid var(--border);background:white;color:var(--texto-principal);font-size:13px;font-family:inherit;cursor:pointer;text-align:left;display:flex;align-items:center;gap:8px;">
+          <i data-lucide="calendar" style="width:14px;height:14px;color:var(--laranja);"></i> Ver agendamentos
+        </button>
+      </div>
+    </div>
+
+    <!-- Documentos -->
+    <div style="background:white;border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;">
+      <h4 style="font-size:13px;font-weight:600;margin-bottom:14px;">Documentos</h4>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="display:flex;align-items:center;gap:8px;padding:10px;background:var(--cinza-fundo);border-radius:var(--radius);">
+          <i data-lucide="file-text" style="width:14px;height:14px;color:var(--azul-secundario);"></i>
+          <span style="font-size:12px;font-weight:500;">Carteirinha de vacinação</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;padding:10px;background:var(--cinza-fundo);border-radius:var(--radius);">
+          <i data-lucide="file-text" style="width:14px;height:14px;color:var(--azul-secundario);"></i>
+          <span style="font-size:12px;font-weight:500;">Laudo de castração</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
